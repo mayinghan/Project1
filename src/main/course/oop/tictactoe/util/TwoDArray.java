@@ -56,6 +56,7 @@ public class TwoDArray {
 			arr[row][col] = val;
 			return "Success! " + val + " was inserted.";
 		} else {
+			//System.out.println("fail");
 			return "Failure: " + row + ", " + col + " is not empty.";
 		}
 
@@ -119,10 +120,13 @@ public class TwoDArray {
 			}
 		}
 		StringBuilder sb = new StringBuilder();
-		Set set = m.entrySet();
-		Iterator it = set.iterator();
-		while(it.hasNext()) {
-			Map.Entry entry = (Map.Entry)it.next();
+//		Set set = m.entrySet();
+//		Iterator it = set.iterator();
+//		while(it.hasNext()) {
+//			Map.Entry entry = (Map.Entry)it.next();
+//			sb.append("value:" + entry.getKey() + " count:" + entry.getValue() + "\n");
+//		}
+		for(Map.Entry<Integer, Integer> entry : m.entrySet()) {
 			sb.append("value:" + entry.getKey() + " count:" + entry.getValue() + "\n");
 		}
 		return sb.toString();
